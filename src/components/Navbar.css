@@ -1,0 +1,250 @@
+/* General Navbar Styles */
+
+.body-no-scroll {
+    overflow: hidden;
+  }
+
+.navbar {
+    position: relative;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: .5rem 1rem;
+}
+
+.navbar-logo {
+    width: 120px;
+    z-index: 1000; /* Ensure the navbar stays above other content */
+}
+
+ .navbar-logo img{
+    width: 100%;
+    display: block;
+} 
+
+.nav-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make sure the content inside the navbar also spans the full width */
+}
+
+.nav-menu-container {
+    padding: .3rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+}
+
+
+.nav-menu li {
+    position: relative;
+    margin: auto;
+    padding: 0rem .5rem;
+}
+
+.nav-menu a {
+    color: rgb(7, 30, 71); /* Initial link color */
+    text-decoration: none; /* Removes default underline */
+    padding: 0.5rem 0; /* Adds vertical padding */
+    font-size: 14px; /* Text size */
+    text-transform: uppercase; /* Uppercase text */
+    width: max-content; /* Link's width adjusts to its content */
+    position: relative; /* For positioning the ::after element */
+}
+
+.nav-menu a:hover {
+    color: #000000; /* Changes text color on hover */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(4, 96, 112); /* Ensure the icon is visible against the background */
+    z-index: 1001; /* Higher than the nav menu */
+    background: none; /* Remove any background color */
+    border: none; /* Remove any border */
+    outline: none; /* Remove the outline on focus */
+    padding: 2rem; /* Remove any padding */
+}
+
+/* Remove border and outline when the icon is clicked or focused */
+.hamburger:focus,
+.hamburger:active {
+    outline: none; /* Remove outline when the icon is focused */
+    border: none; /* Ensure no border appears on active state */
+    box-shadow: none; /* Remove any box-shadow if applied */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* Menu background color */
+    display: none;
+    position: absolute;
+    top: 120%; /* Aligns the dropdown just below the parent */
+    z-index: 1000;
+    flex-direction: column;
+    width: max-content;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+/* Show dropdown menu on hover (for desktop) or when active (for mobile) */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.active {
+    display: flex; /* Flexbox for column layout on mobile */
+}
+
+.dropdown-menu li {
+    width: 100%;
+    left: -2.5rem;
+}
+
+
+.dropdown-menu a {
+    color: rgb(22, 21, 21);
+    font-family: 'roboto';
+}
+
+.dropdown-menu a:hover {
+    color: #0749ac;
+}
+
+.nav-menu a::after {
+    background-color: rgba(15, 140, 212, 0); /* Color of the underline */
+}
+
+/* Additional Hover Effect */
+
+
+
+
+/* Responsive Navbar */
+@media screen and (max-width: 1250px) {
+
+
+    .navbar {
+        background-color: transparent; /* Or any desired color */
+    }
+
+    .dropdown-menu::-webkit-scrollbar {
+        width: 8px; /* Customize scrollbar width */
+      }
+    
+      .dropdown-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3); /* Scrollbar thumb color */
+        border-radius: 4px; /* Rounded edges */
+      }
+    
+      .dropdown-menu::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1); /* Track color */
+      }
+    
+
+    .nav-box button:hover {
+        background-color: rgba(204, 51, 102, 0);
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu icon on smaller screens */
+    }
+
+    .contact-us-button button {
+        display: none;
+    }
+
+        .nav-menu {
+            flex-direction: column;
+            position: fixed; /* Keep the nav menu fixed within the viewport */
+            top: 0;
+            left: -100%; /* Initially hide the menu off-screen to the left */
+            width: 70%; /* Set the desired width for the menu */
+            height: 100%; /* Cover the entire viewport height */
+            background-color: #ffffff; /* Menu background color */
+            transition: left 0.3s ease; /* Smooth transition when sliding in */
+            z-index: 999; /* Ensure the menu stays on top of other content */
+            padding: 10rem 2rem 2rem 2rem; /* Adjust padding to fit the design */  
+            /* overflow-y: auto; Enable scrolling for the main menu */
+  
+        }
+
+        .nav-menu.active {
+            left: 0; /* Slide the menu into view */
+        }
+
+
+        .nav-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .nav-menu::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        .nav-menu::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-menu li {
+            margin-left: 0;
+            margin: 0.5rem 0;
+            text-align: left;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.308); /* Optional separator */
+        }
+    
+        .dropdown-menu {
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff; /* Menu background color */
+            border: 1px solid rgba(0, 0, 0, 0.199);
+            overflow-y: auto;
+            max-height: 300px;
+
+        }
+    
+
+    .dropdown-menu a:hover {
+        color: #ffffff;
+    }
+    
+    .nav-menu a {
+        color: #000000; /* Link color for the menu */
+    }
+
+    .nav-menu a:hover {
+        color: #047b80; /* Highlight color on hover */
+    }
+
+    .navbar-logo {
+        width: 150px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-logo {
+        width: 110px;
+    }
+    .navbar {
+        padding: 0rem 1rem;
+    }
+    
+}

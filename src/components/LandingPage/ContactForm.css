@@ -1,0 +1,214 @@
+
+.contactForm {
+  margin: 3rem 0 0 0;
+  padding: 1rem;
+}
+
+.formHeader {
+  background-color: rgb(248, 243, 243);
+}
+
+.form-insurance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.form-insurance-header {
+  padding: 2rem 0;
+}
+
+.form-insurance-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  line-height: normal;
+  color: rgb(29, 27, 27);
+}
+
+.form-insurance-header p {
+  text-align: center;
+}
+
+.insurance-thumbnail {
+  width: 25%;
+  height: fit-content;
+  display: block;
+  margin: auto;
+}
+
+.insurance-thumbnail img {
+  width: 100%;
+  height: fit-content;
+  display: block;
+}
+
+
+.contactFormHeader {
+  text-align: center;
+  background-color: #58799d;
+  padding: 3rem 1rem;
+}
+
+.contactFormHeader h1 {
+  text-align: center;
+  font-size: 2rem;
+  line-height: normal;
+  color: white;
+}
+
+.inputs p {
+  line-height: normal;
+  color: rgb(53, 49, 49);
+  font-size: 16px;
+  padding-bottom: 2rem;
+}
+
+.footer_get_touch_inner {
+  width: 100%;
+  padding: 2rem;
+  margin: auto;
+  background-color: #e8ebee;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+input {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #1b2f4d;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  height: 42px;
+  padding: 0 20px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+}
+
+.input-flex-item {
+  width: 100%;
+}
+
+textarea {
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  color: #ffffff;
+  padding: 12px 20px;
+  width: 100%;
+  outline: 0;
+  resize: none;
+  background-color: #1b2f4d;
+  border-radius: 15px;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder {
+  color: rgba(252, 252, 252, 0.747);
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.822);
+}
+
+
+input[type="submit"] {
+  background-color: #1b2f4d;
+  border: none;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 20px;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(190, 126, 6);
+  color: #fff;
+}
+
+.input-flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.form-map {
+  width: 100%;
+  height: 300px;
+  padding: 1rem;
+}
+
+.form-map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.disclaimer p {
+  font-size: 12px;
+  color: rgb(36, 34, 34);
+  padding: .5rem 0;
+}
+
+.disclaimer span {
+  padding: 1rem 0;
+  font-size: 12px;
+  color: rgb(29, 103, 201);
+}
+
+@media screen and (max-width: 940px) {
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .get_form_inner {
+    margin: 2rem 1rem;
+  }
+
+  .contactForm {
+    padding-bottom: 0rem;
+  }
+
+
+  
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .footer_get_touch_inner {
+    padding: 0rem;
+  }
+
+  .inputs h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .inputs p {
+    font-size: 14px;
+    text-align: center;
+  }
+}

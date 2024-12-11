@@ -1,0 +1,157 @@
+.offer {
+    width: 100%;
+    height: auto;
+    width: 100%;
+    background-image: url('../../assets/texture.webp');
+  }
+
+.offerHeader {
+    padding: 2rem 0 0 0;
+}
+
+.offerHeader hr {
+    width: 8%;
+}
+
+.offerHeader h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-family: "Noto Serif Oriya", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+}
+
+.offerFlex {
+    padding: 2rem 0;
+    z-index: 9999;
+}
+
+.offerFlexItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.offerImg {
+    width: 100%;
+}
+
+.offerImg img {
+    width: 100%;
+    border-radius: 5px;
+    transition: 1s;
+
+}
+
+.iconText {
+    transition: 1s;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.158) 0px 1px 2px 0px; */
+}
+
+.offerImg img:hover {
+    border-radius: 5px;
+
+} 
+
+.iconText:hover {
+    background-color: #58799d;
+    border-radius: 5px;
+    border: none;
+}
+
+.iconText:hover h2 {
+    color: white;
+}
+
+.iconText:hover h1 {
+    color: white;
+}
+
+.iconText:hover p {
+    color: white;
+}
+
+.iconText h1 {
+    font-size: 3rem;
+    color: #86927d;
+    text-align: center;
+}
+
+.iconText h2 {
+    font-size: 1.2rem;
+    color: rgb(39, 36, 36);
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+.iconText p {
+    text-align: center;
+    color: #000000cb;
+    padding: 1rem;
+  }
+  
+
+  .iconText {
+    z-index: 1; /* Ensures no overlapping elements prevent click */
+  }
+
+.iconText p {
+    color: rgb(39, 36, 36);
+    font-size: 1rem;
+}
+
+.iconText span a {
+    color: #cd8c63;
+}
+
+.iconFlexItem {
+    width: 40%;
+}
+
+
+.iconFlex {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+
+@media screen and (max-width: 940px) {
+
+    .offerFlexItem {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .iconFlexItem {
+        width: 40%;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .iconFlexItem {
+        width: 100%;
+    }
+
+    .iconText {
+        width: 90%;
+        margin: auto;
+    }
+
+    .iconText h2 {
+        font-size: 1.2rem;
+    }
+    
+    .iconText p {
+        font-size: 14px;
+    }
+}

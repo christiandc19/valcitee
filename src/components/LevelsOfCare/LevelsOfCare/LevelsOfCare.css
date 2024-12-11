@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+@font-face {
+  font-family: 'Wildest';
+  src: url('../../assets/fonts/Wildest.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.levels-of-care-hero {
+  width: 100%;
+  height: 50vh; /* Ensures it takes up the full viewport height */
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1; /* Ensures it stays above the background but doesn't interfere with the footer */
+}
+
+.levels-of-care-hero:before {
+  content: '';
+  position: absolute;
+  background: url('../../../assets/levels-of-care-hero.webp') no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /* Behind everything in the hero */
+}
+
+.levels-of-care-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0232413f; /* Black overlay */
+  z-index: 0; /* Between the image and content */
+}
+
+.levels-of-care-hero-content {
+  width: 100%;
+  bottom: 20%;
+  position: absolute;
+  padding: 1rem;
+  text-align: center;
+  z-index: 2; /* Ensures the content is above the overlay */
+}
+
+.levels-of-care-hero h1 {
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    line-height: 6rem;
+    font-family: 'Wildest', sans-serif;
+    text-align: center;
+}
+
+.levels-of-care-hero h2 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-family: 'Wildest', sans-serif;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:940px) {
+
+  .levels-of-care-hero-content {
+    width: 100%;
+    left: 0%;
+  }
+
+    .levels-of-care-hero h1 {
+        font-size: 4rem;
+        text-align: center;
+        line-height: 3.5rem;
+    }
+
+}
+
+
+
+@media screen and (max-width:600px) {
+  .levels-of-care-hero h1 {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 2rem;
+  }
+}
