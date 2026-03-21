@@ -1,8 +1,7 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// https://vite.dev/config/
 export default defineConfig({
-  // base: '/corte_madera_rehab/',  // Add this line for correct asset path
-  plugins: [react()]
+  plugins: [react()],
 })
