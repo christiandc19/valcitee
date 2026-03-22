@@ -1,49 +1,36 @@
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Center, Bounds, ContactShadows } from "@react-three/drei";
+import { OrbitControls, Center, Bounds, useGLTF } from "@react-three/drei";
 
-useGLTF.preload("/models/jersey_baseball.glb");
+const MODEL_URL = "https://valcitee.s3.us-east-1.amazonaws.com/jersey_baseball.glb";
+
+useGLTF.preload(MODEL_URL);
 
 function ShirtModel() {
-  const { scene } = useGLTF("/models/jersey_baseball.glb");
+  const { scene } = useGLTF(MODEL_URL);
 
   return (
-    <Center>
-      <primitive
-        object={scene}
-        rotation={[0, Math.PI / 4, 0]}
-        position={[0, -0.6, 0]} // 🔥 move DOWN (important)
-      />
-    </Center>
+    <Bounds fit clip observe margin={1.2}>
+      <Center>
+        <primitive object={scene} />
+      </Center>
+    </Bounds>
   );
 }
 
 export default function ShirtViewer() {
   return (
-    <div className="shirtViewer">
-      <Canvas camera={{ position: [0, 0.5, 14], fov: 42 }}>
-        {/* Lighting */}
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[4, 5, 4]} intensity={1.2} />
-        <directionalLight position={[-3, 2, -3]} intensity={0.4} />
-
-        {/* 🔥 Bigger margin for tall object */}
-        <Bounds fit clip observe margin={1.2}>
+    <div style={{ width: "100%", height: "500px" }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+        <ambientLight intensity={1.5} />
+        <directionalLight position={[5, 5, 5]} intensity={2} />
+        <Suspense fallback={null}>
           <ShirtModel />
-        </Bounds>
-
-        <ContactShadows
-          position={[0, -2.8, 0]}
-          opacity={0.25}
-          scale={12}
-          blur={3}
-          far={5}
-        />
-
+        </Suspense>
         <OrbitControls
           autoRotate
-          autoRotateSpeed={1.3}
+          autoRotateSpeed={2}
           enableZoom={false}
-          enablePan={false}
         />
       </Canvas>
     </div>
